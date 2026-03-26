@@ -20,7 +20,7 @@
 
     <br>
     @if(isset($resultado))
-
+        
         <h3>Resultado de la suma: {{$resultado}}</h3>
         
     @endif

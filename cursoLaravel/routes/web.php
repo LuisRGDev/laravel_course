@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Http\Controllers\SumaController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -20,6 +22,6 @@ Route::post('/suma', function (Request $request) {
     $num2 = $request->input('num2');
     $resultado = $num1 + $num2;
     echo "La suma de $num1 + $num2 es: $resultado";
-
+    
     return view('suma', ['resultado' => $resultado]);
 });
