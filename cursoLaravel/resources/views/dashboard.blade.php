@@ -5,71 +5,10 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: ../index.php");
     exit;
 } -->
+@extends('layouts.app')
 
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pagina TI</title>
-    <link rel="stylesheet" href="../CSS/styles.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="nav-bar">
-        <div class="nav-div">
-          <ul class="u-list">
-            <h1 class="title">THE CHRONICLES OF THE NEW ONE!</h1>
-            <li class="item-centralizado">
-              <span
-                ><a href="../dashboard/dashboard.php" aria-label="ir al inicio"
-                  ><img
-                    class="imgtno"
-                    src="../Media/TNOlogo.png"
-                    alt="imagen logo the new one" /></a
-              ></span>
-              <button class="hamburger" id="hamburger">☰</button>
-            </li>
-            <div class="options">
-              <li class="options-list">
-                <img
-                  class="icon-menu"
-                  src="https://cdn-icons-png.flaticon.com/128/10165/10165587.png"
-                  alt="icono de descripcion"
-                />
-                <a href="#Descripcion">Descripción</a>
-              </li>
-              <li class="options-list">
-                <img
-                  class="icon-menu"
-                  src="https://cdn-icons-png.flaticon.com/128/10/10910.png"
-                  alt="icono de tareas"
-                />
-                <a href="../HTML/tareas.php">Tareas</a>
-              </li>
-              <li class="options-list">
-                <img
-                  class="icon-menu"
-                  src="https://cdn-icons-png.flaticon.com/128/1001/1001371.png"
-                  alt="icono de notas"
-                />
-                <a href="../HTML/notas.php">Notas</a>
-              </li>
-              <li class="options-list">
-                <img
-                  class="icon-menu"
-                  src="https://cdn-icons-png.flaticon.com/128/18647/18647593.png"
-                  alt="icono de contacto"
-                />
-                <a href="#Contacto">Contacto</a>
-              </li>
-            </div>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
+@section('titulo', 'Pagina TI')
+    @section('content')
     <main>
       <section class="article-vid">
         <article id="Descripcion">
@@ -93,58 +32,11 @@ if (!isset($_SESSION['user_id'])) {
             />
             tu navegador no soporta fomatos de video
           </video>
-          <!-- <figcaption>Video demostrativo del area de TI</figcaption> -->
-          <!-- <audio src=""></audio>
 
-        <audio controls preload="auto">
-          <source src="ruta del audio.mp3" type="audio/mpeg" />
-          Tu navegador no soporta audio HTML5
-        </audio> -->
-
-          <!-- <iframe
-          width="560"
-          height="315"
-          src="link del video"
-          title="Youtube video player"
-          frameborder="0"
-          allow="acelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe> -->
         </figure>
       </section>
 
-      <!-- <section class="section-table">
-        <h2 id="Tareas">
-          Las tareas que realizo mas comunmente son las siguientes:
-        </h2>
-        <table>
-          <thead>
-            <tr>
-              <td>Solicitado</td>
-              <td>Tarea</td>
-              <td>Descripcion</td>
-              <td>Destinatario</td>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>Jorge Suarez</td>
-              <td>Alta de nuevos ingresos</td>
-              <td>
-                Realizar el alta de un nuevo empleado en el dominio, preparar
-                sus herramientas, utilerias y brindarle la capacitacion
-                necesaria para que conozca el uso correcto de cada una de ellas,
-                ademas de apoyarlo en caso de que tenga alguna duda sobre como
-                solicitar apoyo de TI para asuntos correspondientes al area.
-              </td>
-              <td>TI</td>
-            </tr>
-          </tbody>
-        </table>
-      </section> -->
-
+ 
       <section class="tareas" id="tareas">
         <p class="title-tasks">
           Entre las tareas que realizo mas comunmente estan las siguientes:
@@ -274,58 +166,4 @@ if (!isset($_SESSION['user_id'])) {
         </aside>
       </section>
     </main>
-
-    <footer>
-      <section class="section-contact">
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/luisalberto.rosales.397/"
-              ><img
-                class="imgs-footer"
-                src="https://cdn-icons-png.flaticon.com/128/1384/1384005.png"
-                alt="Red social facebook"
-            /></a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/luis__rg4l/">
-              <img
-                class="imgs-footer"
-                src="https://cdn-icons-png.flaticon.com/128/1384/1384015.png"
-                alt="Red social Instagram"
-            /></a>
-          </li>
-          <li class="img-footer-logo">
-            <img
-              class="img-footer"
-              src="../Media/TNOlogo.png"
-              alt="imagen the new one"
-            />
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/luis-alberto-rosales-garc%C3%ADa-582b882aa/"
-            >
-              <img
-                class="imgs-footer"
-                src="https://cdn-icons-png.flaticon.com/128/1384/1384014.png"
-                alt="Linkedin"
-            /></a>
-          </li>
-          <li>
-            <a href="https://github.com/LuisRGDev"
-              ><img
-                class="imgs-footer"
-                src="https://cdn-icons-png.flaticon.com/128/4926/4926624.png"
-                alt="Github"
-            /></a>
-          </li>
-        </ul>
-      </section>
-      <section class="section-copyright">
-        Todos los derechos reservados TheNewOne©.| Aviso de Privacidad
-      </section>
-    </footer>
-
-    <script src="../JS/script.js"></script>
-  </body>
-</html>
+    @endsection

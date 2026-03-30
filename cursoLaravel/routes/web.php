@@ -19,3 +19,4 @@ Route::get('/dashboard', function () {
 Route::get('/suma', [SumaController::class, 'index']);
 
 Route::post('/suma', [SumaController::class, 'suma']);
+
