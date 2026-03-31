@@ -4,10 +4,10 @@
             <h1 class="title">THE CHRONICLES OF THE NEW ONE!</h1>
             <li class="item-centralizado">
               <span
-                ><a href="../dashboard/dashboard.php" aria-label="ir al inicio"
+                ><a href="{{ route('dashboard') }}" aria-label="ir al inicio"
                   ><img
                     class="imgtno"
-                    src="../Media/TNOlogo.png"
+                    src="{{ asset('images/TNOlogo.png')}}"
                     alt="imagen logo the new one" /></a
               ></span>
               <button class="hamburger" id="hamburger">☰</button>
@@ -27,7 +27,7 @@
                   src="https://cdn-icons-png.flaticon.com/128/10/10910.png"
                   alt="icono de tareas"
                 />
-                <a href="../HTML/tareas.php">Tareas</a>
+                <a href="{{ route('tareas') }}">Tareas</a>
               </li>
               <li class="options-list">
                 <img
@@ -35,7 +35,7 @@
                   src="https://cdn-icons-png.flaticon.com/128/1001/1001371.png"
                   alt="icono de notas"
                 />
-                <a href="../HTML/notas.php">Notas</a>
+                <a href="{{ route('notas') }}">Notas</a>
               </li>
               <li class="options-list">
                 <img

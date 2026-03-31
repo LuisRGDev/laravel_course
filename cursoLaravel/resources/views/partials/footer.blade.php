@@ -20,7 +20,7 @@
           <li class="img-footer-logo">
             <img
               class="img-footer"
-              src="../Media/TNOlogo.png"
+              src="{{ asset('images/TNOlogo.png')}}"
               alt="imagen the new one"
             />
           </li>
