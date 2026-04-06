@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\SumaController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
 Route::get('/dashboard', function () {
