@@ -5,7 +5,7 @@
 @section('content')
 <main>
       <div class="task_h1">
-        <h1>Descripción de tareas</h1>
+        <h1>DESCRIPCION DE TAREAS</h1>
         <p class="task_notep">
           Para revisar los manuales y el proceso correspondiente de cada tarea
           mencionada, haz clic en el contenedor (solo podran acceder al link

@@ -5,10 +5,17 @@
 @section('content')
 <main>
       <div class="task_h1">
-        <h1>Notas de apoyo</h1>
+        <h1>NOTAS DE APOYO</h1>
         <p class="task_notep">
-          En esta seccion podras visualizar las notas acerca de problemas o
-          tickets que ocurren mas comunmente.
+        Como primera recomendación, te sugiero utilizar HP Support Assistant. Es una herramienta muy útil que me ha ayudado a resolver una gran cantidad de tickets.
+
+        En la mayoría de los casos, está relacionada con actualizaciones y correcciones que HP envía directamente a cada laptop según su modelo. Gracias a esto, puedes solucionar problemas de forma rápida y automática.
+
+        Si la utilizas correctamente, puede ayudarte a resolver aproximadamente el 50% de los tickets sin necesidad de intervenciones más complejas.
+        </p>
+
+        <p class="task_notep">
+
         </p>
       </div>
 
