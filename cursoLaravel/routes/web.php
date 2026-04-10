@@ -5,11 +5,11 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\SumaController;
 
 Route::get('/', function () {
-    return view('login');
+    return view('auth.login');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('dashboard.dashboard');
 })->name('dashboard');
 
 Route::get('/notas', function () {
