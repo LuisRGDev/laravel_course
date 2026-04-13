@@ -3,10 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\SumaController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+Route::get('/', [AuthController::class, 'showLogin'])->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
+Route::post('/register', [AuthController::class, 'register'])->name('register.post');
 
 Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
@@ -21,9 +24,7 @@ Route::get('/tareas', function () {
     return view('tareas');
 })->name('tareas');
 
-// Route::get('/suma', function () {
-//     return view('suma');
-// });
+
 
 Route::get('/suma', [SumaController::class, 'index']);
 
