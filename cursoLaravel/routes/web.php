@@ -11,6 +11,22 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
 Route::post('/register', [AuthController::class, 'register'])->name('register.post');
 
+//Rutas autenticadas
+Route::middleware('auth')->group(function (){
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/dashboard', fn() => view('dashboard.index'))->name('dashboard');
+
+    Route::middleware('is_admin')->prefix('admin')->name('admin')->group(function () {
+        Route::get('/users', [UserController::class, 'index'])->name('index');
+        Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('edit');
+        Route::put('/uswrs/{user}', [UserController::class, 'update'])->name('update');
+        Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('destroy');
+    });
+
+});
+
+
+
 Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
 })->name('dashboard');
