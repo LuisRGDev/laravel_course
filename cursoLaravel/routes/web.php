@@ -14,12 +14,12 @@ Route::post('/register', [AuthController::class, 'register'])->name('register.po
 //Rutas autenticadas
 Route::middleware('auth')->group(function (){
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-    Route::get('/dashboard', fn() => view('dashboard.index'))->name('dashboard');
+    Route::get('/dashboard', fn() => view('dashboard.dashboard'))->name('dashboard');
 
     Route::middleware('is_admin')->prefix('admin')->name('admin')->group(function () {
         Route::get('/users', [UserController::class, 'index'])->name('index');
         Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('edit');
-        Route::put('/uswrs/{user}', [UserController::class, 'update'])->name('update');
+        Route::put('/users/{user}', [UserController::class, 'update'])->name('update');
         Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('destroy');
     });
 
@@ -42,7 +42,7 @@ Route::get('/tareas', function () {
 
 
 
-Route::get('/suma', [SumaController::class, 'index']);
+// Route::get('/suma', [SumaController::class, 'index']);
 
-Route::post('/suma', [SumaController::class, 'suma']);
+// Route::post('/suma', [SumaController::class, 'suma']);
 

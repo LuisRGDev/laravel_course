@@ -10,7 +10,8 @@
 <body>
     <section class="section-log">
         <div class="container">
-            <form action="auth/login.php" id="Login" class="form" method="POST">
+            <form action="{{ route('login.post') }}" id="Login" class="form" method="POST">
+                @csrf
                 <div class="logotno-container">
                     <img class="logotno" src="{{ asset('images/TNOlogo.png')}}" alt="logo del the new one">
                 </div>
@@ -31,7 +32,7 @@
                     <button class="button_log" type="submit" id="button-login"><p>INGRESAR</p></button>
                 </div>
                 <div class="button-container-register">
-                    <a class="button_reg" id="button-register" href="views/register.php"><p>REGISTRASE</p></a>
+                    <a class="button_reg" id="button-register" href="{{ route('register') }}"><p>REGISTRASE</p></a>
                 </div>
                 <div class="links-container">
                   <a class="recover-password" href="">Olvidaste tu contraseña?</a>  
