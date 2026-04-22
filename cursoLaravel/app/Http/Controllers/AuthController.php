@@ -24,8 +24,12 @@ class AuthController extends Controller
     public function login(LoginRequest $request){
         $credentials =$request->only('email', 'password');
 
+        // dd($credentials, Auth::attempt($credentials));
+        
         if (Auth::attempt($credentials)){
             $request->session()->regenerate();
+            
+            // dd(Auth::user()->role, Auth::user()->isAdmin());
 
             if (Auth::user()->isAdmin()){
                 return redirect()->route('admin.index');

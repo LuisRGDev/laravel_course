@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>Login</title>
     <!-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> -->
-</head>jr
+</head>
 <body>
     <section class="section-log">
         <div class="container">
