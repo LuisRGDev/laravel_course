@@ -774,27 +774,39 @@ footer{
 }
 
 .table-crud{
-    background-color: #0ab0fda8;
-    /* margin-left: 6.5rem; */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
     text-align: center;
-    gap: 4rem;
-    max-width: 40%;
-    width: 30%;
-    height: auto;
-    border-collapse: collapse;
-    border: 1px solid black;
+    width: 80%;
+    max-width: 1000px;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin-bottom: 3rem;
 }
 
 .table-columns{
-    color: #000000;
-    padding: 20px;
-    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    padding: 15px;
+    font-family: var(--fuente-principal);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
 }
 
 .table-data{
-    
-    border: 1px solid black;
-    padding: 10px;
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f0f0f0;
+    font-size: 1rem;
+}
+
+tr:hover .table-data {
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .table-data--button{
@@ -809,15 +821,23 @@ footer{
 }
 
 .crud-buttons--update{
-    background-color: #176294;
-     border-collapse: collapse;
-    padding: 10px;
-    margin-left: .5rem;
-    margin-right: .5rem;
+    background-color: #3498db;
+    border-radius: 8px;
+    padding: 8px 16px;
     text-decoration: none;
     color: #ffffff;
     font-family: var(--fuente-principal);
-    font-size: .8rem;
+    font-size: .75rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: none;
+}
+
+.crud-buttons--update:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
 }
 
 .crud-buttons--delete{
@@ -850,15 +870,40 @@ footer{
 .button--deleteuser{
     cursor: pointer;
     border: none;
-    margin-left: .5rem;
-    margin-right: .5rem;
-    background-color: #f70000;
-    border-collapse: collapse;
-    padding: 10px;
-    text-decoration: none;
+    border-radius: 8px;
+    background-color: #e74c3c;
+    padding: 8px 16px;
     color: #ffffff;
     font-family: var(--fuente-principal);
-    font-size: .8rem;
+    font-size: .75rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.button--deleteuser:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+}
+
+.out-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    font-family: var(--fuente-principal);
+    font-weight: bold;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 10px;
+}
+
+.out-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
 }
 
 /* --------------------------------------------------------------------Responsive--------------------------------------------------------------------------- */

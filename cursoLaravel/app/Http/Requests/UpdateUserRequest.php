@@ -23,7 +23,7 @@ class UpdateUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => "required|email|unique:users,email,{$userId}",
+            'email' => "required|email|unique:users,email,{$this->user->id}",
             'role' => 'required|in:admin,user',
             'password' => 'nullable|string|min:8',
         ];
